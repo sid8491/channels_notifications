@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        {% load static %}
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>Assign Jobs</h1>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-6" id="submit-job">
+                    <h3>Please fill the details and click submit to assign the jobs!</h3>
+                    <h6>These events will go through XMPP connection and notification will appear on main page.</h6>
+                    <br />
+                    <form id="form-wrapper" class="needs-validation">
+                        <div class="form-group">
+                            <label for="nameInput">Enter the name</label>
+                            <input type="text" class="form-control" id="nameInput" placeholder="Jon Doe" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="countrySelect">Select the country</label>
+                            <select class="form-control" id="countrySelect">
+                              <option>India</option>
+                              <option>Dubai</option>
+                              <option>Singapore</option>
+                              <option>Melbourne</option>
+                              <option>Sydney</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="salaryInput">Assign the salary</label>
+                            <input type="number" class="form-control" id="salaryInput" required>
+                            <small id="salaryInputHelpBlock" class="form-text text-muted">
+                                Please enter the number only. Salary is in LPA.
+                              </small>
+                          </div>
+                          <button type="submit" class="btn btn-primary" id="formSubmit">Submit</button>
+                    </form>
+                    <div class="alert alert-dark" role="alert">
+                        Go back to the main page, you will be see the notification there in real time on form submission.
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <script src="{% static 'notifications/reconnecting-websocket.min.js' %}"></script>
+        <script src="{% static 'notifications/assign_job.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,18 +1,17 @@
 const socket = new ReconnectingWebSocket('ws://127.0.0.1:8000/ws/notifications/');
 
 socket.onopen = function(e) {
-    console.log(`connection made ${e}`);
+    console.log('connection made');
 };
 
 socket.onmessage = function(e) {
     console.log('msg came');
     const data = JSON.parse(e.data);
-    console.log(data)
     appendNotification(data);
 };
 
 socket.onclose = function(e) {
-    console.error(`Chat socket closed unexpectedly ${e}`);
+    console.error('Chat socket closed unexpectedly');
 };
 
 function appendNotification(data) {

@@ -11,15 +11,18 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col-6" id="notifications-panel">
-                    <h3>Your notifications will appear here!</h3>
-                    <!-- <div class="alert notifications" id="notifications" role="alert">
-                        <b>John</b> is selected for <b>India</b> with an offer of 25LPA.
-                        <span class="float-right text-muted">04:31 PM</span>
-                    </div> -->
+                    <h3>Your notifications will appear here once you submit the form.</h3>
+                    <h3><a href="{% url 'assign_jobs' %}" target="_blank">Click here to submit the form</a></h3>
+                    <hr />
+                    <h6>Sample Notification:</h6>
+                    <div class="alert notifications alert-success" role="alert">
+                        <b>Jane Doe</b> is selected for <b>Dubai</b> with an offer of 35LPA.
+                        <span class="float-right text-muted">13:15:26</span>
+                    </div>`
                 </div>
                 <div class="col"></div>
             </div>
-          </div>
+        </div>
         <script src="{% static 'notifications/reconnecting-websocket.min.js' %}"></script>
         <script src="{% static 'notifications/app.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
